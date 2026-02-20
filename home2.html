@@ -213,7 +213,7 @@ body{
 
 <!-- DESKTOP DROPDOWN -->
 <ul class="dropdown-menu" id="desktopDropdown">
-  <li><a href="index.html">Home </a></li>
+  <li><a href="home.html">Home </a></li>
 </ul>
 
 <!-- MOBILE MENU -->
@@ -226,7 +226,7 @@ body{
   <ul>
     <li onclick="toggleMobileDropdown()">Home 2▾</li>
     <ul class="mobile-dropdown" id="mobileDropdown">
-      <li onclick="location.href='index.html'">Home</li>
+      <li onclick="location.href='home.html'">Home</li>
     </ul>
     <li onclick="location.href='about.html'">About</li>
     <li onclick="location.href='tickets.html'">Tickets</li>
@@ -1587,7 +1587,7 @@ tabs.forEach(tab=>{
 
       </ul>
 
-      <a href="404.html" class="faq-more">READ MORE →</a>
+      <a href="contact.html.html" class="faq-more">READ MORE →</a>
     </div>
 
     <!-- RIGHT IMAGE -->
@@ -1615,3 +1615,191 @@ document.querySelectorAll(".faq-question").forEach(q=>{
 
 </body>
 </html>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <a href="404.html">
+        <img src="logo.webp" alt="Stackly Logo" class="footer-logo">
+      </a>
+
+      <p>
+        We provide smart, reliable, and modern solutions to help your business
+        grow digitally with confidence.
+      </p>
+
+      <div class="support">
+        <span>📞 Call Support</span>
+        <h3><a href="404.html">+91 98765 43210</a></h3>
+      </div>
+
+      <div class="social-icons">
+        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+        <a href="404.html"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- USEFUL LINKS -->
+    <div class="footer-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="404.html">› Company Profile</a></li>
+        <li><a href="404.html">› Help Center</a></li>
+        <li><a href="404.html">› Contact Us</a></li>
+        <li><a href="404.html">› Social Marketing</a></li>
+        <li><a href="404.html">› Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-links">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="404.html">› Application Assistance</a></li>
+        <li><a href="404.html">› Ticket Guidance</a></li>
+        <li><a href="404.html">› Documentation Support</a></li>
+        <li><a href="404.html">› Social Marketing</a></li>
+        <li><a href="404.html">› License</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    <p>Copyright © 2026 <span>Stackly</span>. All Rights Reserved.</p>
+    <div class="bottom-links">
+      <a href="404.html">Privacy Policy</a>
+      <a href="404.html">FAQ</a>
+      <a href="404.html">Feedback</a>
+    </div>
+  </div>
+</footer>
+<style>
+  .footer{
+  background:#0f172a;
+  color:#fff;
+  font-family:'Poppins',sans-serif;
+}
+
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-logo{
+  width:160px;
+  margin-bottom:20px;
+}
+
+.footer-brand p{
+  color:#cbd5e1;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.support{
+  margin:20px 0;
+}
+
+.support h3 a{
+  color:#ff3b3b;
+  font-size:20px;
+  text-decoration:none;
+}
+
+.social-icons a{
+  display:inline-flex;
+  margin-right:10px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#1e293b;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:.3s;
+}
+
+.social-icons a:hover{
+  background:#ff3b3b;
+}
+
+.footer-links h4{
+  margin-bottom:20px;
+  font-size:18px;
+}
+
+.footer-links ul{
+  list-style:none;
+  padding:0;
+}
+
+.footer-links ul li{
+  margin-bottom:12px;
+}
+
+.footer-links ul li a{
+  color:#cbd5e1;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.footer-links ul li a:hover{
+  color:#ff3b3b;
+  padding-left:5px;
+}
+
+.footer-bottom{
+  border-top:1px solid #1e293b;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.footer-bottom span{
+  color:#ff3b3b;
+}
+
+.bottom-links a{
+  margin-left:20px;
+  color:#cbd5e1;
+  text-decoration:none;
+}
+
+.bottom-links a:hover{
+  color:#ff3b3b;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .footer-container{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+  .footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .social-icons{
+    justify-content:center;
+  }
+
+  .footer-bottom{
+    text-align:center;
+    gap:10px;
+  }
+}
+</style>
