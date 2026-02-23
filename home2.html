@@ -82,7 +82,7 @@
   background:#f5f5f5;
 }
 .dropdown-menu a{
-  color:#111;
+  color:#ffffff;
   text-decoration:none;
 }
 
@@ -213,8 +213,8 @@ body{
   background: #4b4a4a;
 }
 
-/* show on hover */
-.home-dropdown:hover .home-menu {
+/* show on click */
+.home-menu.visible {
   display: block;
 }
 </style>
@@ -231,7 +231,8 @@ body{
   <nav class="nav">
     <ul>
       <li class="home-dropdown">
-  <a href="home2.html" id="homeBtn">Home2 ▾</a>
+  <a href="home2.html">Home2</a>
+  <span id="arrowBtn" style="cursor:pointer; margin-left:5px;">▾</span>
 
   <div class="home-menu">
     <a href="home.html">Home</a>
@@ -284,18 +285,20 @@ body{
 
 <script>
 /* DESKTOP DROPDOWN */
-const homeBtn = document.getElementById("homeBtn");
-const dropdown = document.getElementById("desktopDropdown");
+const arrowBtn = document.getElementById("arrowBtn");
+const homeMenu = document.querySelector(".home-menu");
+const homeDropdown = document.querySelector(".home-dropdown");
 
-homeBtn.onclick = (e)=>{
+arrowBtn.onclick = (e)=>{
   e.preventDefault();
   e.stopPropagation();
-  dropdown.style.display =
-    dropdown.style.display === "block" ? "none" : "block";
+  homeMenu.classList.toggle("visible");
 };
 
-document.addEventListener("click", ()=>{
-  dropdown.style.display = "none";
+document.addEventListener("click", (e)=>{
+  if (!homeDropdown.contains(e.target)) {
+    homeMenu.classList.remove("visible");
+  }
 });
 
 /* MOBILE MENU */
